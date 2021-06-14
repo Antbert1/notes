@@ -10,16 +10,19 @@ function Homepage() {
 
   const testNotes = [
     {
+      id: "note1",
       title: "note 1",
       content: "fgggg",
       lastEdited: d
     },
     {
+      id: "note2",
       title: "note 2",
       content: "yuiyuoiu",
       lastEdited: d
     },
     {
+      id: "note3",
       title: "note 3",
       content: "cvbcvbcvb",
       lastEdited: d

@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
+import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+
+// Displays the selected note on the right of the screen
 
 function Note(props) {
 
   return (
     <div className="individualNote">
       <div className="noteTitle">
-        {props.note.title}
+        <Link to={{
+           pathname: `/note/${props.note.id}`,
+           state: {note: props.note}
+        }}>
+          {props.note.title}
+        </Link>
       </div>
       <div className="dateMod">
         {props.note.lastEdited.toString()}

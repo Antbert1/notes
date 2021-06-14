@@ -1,0 +1,28 @@
+body {
+  background-color: #389DA7;
+  color: white;
+}
+
+.header {
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.note {
+  background-color: #CDE1E3;
+  color: 	#505050;
+  margin-bottom: 5px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.selected {
+  font-weight: 700;
+}

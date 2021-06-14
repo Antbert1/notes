@@ -1,8 +1,11 @@
 import React, { useState, Button } from 'react';
 import Modal from 'react-modal';
 
+//Opens a modal that can either add or edit a note, depending on the edit flag
+
 function NewNote(props) {
 
+  //Set defaults as blank, but use the current note prop if it is an edit
   let defaultTitle = "";
   let defaultContent = "";
   if (props.edit) {
@@ -27,6 +30,7 @@ function NewNote(props) {
   }
 
   function handleSubmit() {
+    // Take state values and send these back to addNote
     props.addNote(titleValue, contentValue, props.edit);
     props.closeModal();
   }

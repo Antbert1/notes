@@ -7,6 +7,7 @@ import IndividualNote from './components/IndividualNote';
 function App() {
 
   return(
+    // Routes for homepage and individual note page
     <Router>
       <Route exact path="/" component={Homepage} />
       <Route path="/note/:noteID" component={IndividualNote} />

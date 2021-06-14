@@ -1,8 +1,7 @@
 import React, { useParams } from 'react';
 
+// Shows just the note as an individual page
 function IndividualNote(props) {
-
-  // const { note } = useParams();
 
   return (
     <div className="individualNote">

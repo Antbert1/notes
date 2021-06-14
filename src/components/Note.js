@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, BrowserRouter as Router, Route } from "react-router-dom";
 
+// Displays the selected note on the right of the screen
+
 function Note(props) {
 
   return (
@@ -11,7 +13,7 @@ function Note(props) {
            state: {note: props.note}
         }}>
           {props.note.title}
-        </Link>    
+        </Link>
       </div>
       <div className="dateMod">
         {props.note.lastEdited.toString()}

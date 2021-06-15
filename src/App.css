@@ -15,6 +15,10 @@ body {
   margin-bottom: 20px;
 }
 
+.editBtn {
+  background-color: #CDE1E3;
+}
+
 .note {
   background-color: #CDE1E3;
   color: 	#505050;
@@ -25,4 +29,70 @@ body {
 
 .selected {
   font-weight: 700;
+}
+
+.individualNote {
+  background-color: white;
+  color: 	#505050;
+  padding: 15px;
+}
+
+.noteTitle a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #505050 !important;
+}
+
+.dateMod {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.noteContent {
+  padding-bottom: 20px;
+}
+
+/* Modal */
+.ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addEditNote {
+  background: white;
+  color: #505050;
+  width: 500px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 15%);
+}
+
+.inputStyle {
+  width: 100%;
+}
+
+.noteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.closeIcon {
+  width: 30px;
+  cursor: pointer;
+}
+
+.inputTitle {
+  padding-top: 10px;
+}
+
+.individualNote {
+  margin-top: 20px;
+}
+
+.individualNote .noteTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #505050 !important;
 }

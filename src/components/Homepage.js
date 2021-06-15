@@ -58,16 +58,20 @@ function Homepage() {
 
     // Create a lastmodified date
     const modified = new Date();
+    //For the id, convert the title to lowercase and remove any spaces
+    const id = title.replace(/\s/g, '').toLowerCase()
     let newNotes = notes;
     if (edit) {
       notes[noteIndex] =
       {
+        id: id,
         title: title,
         content: content,
         lastEdited: modified
       }
     } else {
       newNotes.push({
+        id: id,
         title: title,
         content: content,
         lastEdited: modified

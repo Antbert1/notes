@@ -37,22 +37,30 @@ function NewNote(props) {
 
   return (
     <Modal
-         isOpen={true}
-         onRequestClose={closeModal}
-       >
-         <form onSubmit={handleSubmit}>
-           <label>
-             Title
-             <input type="text" value={titleValue} onChange={handleTitleChange} />
-           </label>
-           <label>
-             Content
-             <input type="text" value={contentValue} onChange={handleContentChange} />
-           </label>
-           <input type="submit" value={props.edit ? "Edit": "Save"}/>
-         </form>
-         <button onClick={closeModal}>Close</button>
-       </Modal>
+       isOpen={true}
+       onRequestClose={closeModal}
+       className="addEditNote"
+       centered
+     >
+       <div className="noteHeader">
+         {props.edit ?
+           <h2>Edit Note</h2>
+           :
+           <h2>Add Note</h2>
+         }
+         <img onClick={closeModal} src={require('../assets/closeIcon.png').default} className="closeIcon" alt="close icon"/>
+       </div>
+
+      <form onSubmit={handleSubmit}>
+        <div className="inputTitle">Title</div>
+        <input className="inputStyle" type="text" value={titleValue} onChange={handleTitleChange} />
+        <div className="inputTitle">Content</div>
+        <textarea className="inputStyle" rows={5} value={contentValue} onChange={handleContentChange} />
+        <div>
+          <input type="submit" value={props.edit ? "Edit": "Save"} className="btn editBtn"/>
+        </div>
+      </form>
+     </Modal>
   );
 }
 

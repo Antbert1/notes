@@ -16,12 +16,12 @@ function Note(props) {
         </Link>
       </div>
       <div className="dateMod">
-        {props.note.lastEdited.toString()}
+        Last modified: {props.note.lastEdited.toLocaleString()}
       </div>
       <div className="noteContent">
         {props.note.content}
       </div>
-      <button onClick={() => { props.editNote(true) }}>Edit</button>
+      <button className="btn editBtn" onClick={() => { props.editNote(true) }}>Edit</button>
     </div>
   );
 }

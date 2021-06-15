@@ -55,17 +55,22 @@ function Homepage() {
 
   function addNote(title, content, edit) {
     // If editing, use currently selected note and update it. If adding, push the new note onto the list
+
+    // Create a lastmodified date
+    const modified = new Date();
     let newNotes = notes;
     if (edit) {
       notes[noteIndex] =
       {
         title: title,
-        content: content
+        content: content,
+        lastEdited: modified
       }
     } else {
       newNotes.push({
         title: title,
-        content: content
+        content: content,
+        lastEdited: modified
       });
     }
     updateNotes(newNotes);
